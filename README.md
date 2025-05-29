@@ -23,7 +23,8 @@ Terdapat beberapa class utama:
 
 Berikut adalah tampilan antarmuka aplikasi:
 
-![Tampilan Awal](screenshots/homepage.png)
+![image](https://github.com/user-attachments/assets/1e511783-58b4-44be-9f76-1bf5a5166e8a)
+
 ![Tampilan Peminjaman Buku](screenshots/borrowbook.png)
 
 >Catatan: Tampilan dapat berubah seiring perkembangan project.
