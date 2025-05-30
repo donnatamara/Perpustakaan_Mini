@@ -23,7 +23,7 @@ Terdapat beberapa class utama:
 
 Berikut adalah tampilan antarmuka aplikasi:
 
-![image](https://github.com/user-attachments/assets/1e511783-58b4-44be-9f76-1bf5a5166e8a)
+![image](https://github.com/user-attachments/assets/9b088e15-d864-4fba-982f-f4633be00326)
 
 ![Tampilan Peminjaman Buku](screenshots/borrowbook.png)
 
