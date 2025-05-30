@@ -1,20 +1,24 @@
 # **📚 Perpustakaan Mini**
 
-Aplikasi "Perpustakaan Mini" adalah aplikasi sederhana berbasis Java yang digunakan untuk mengelola data buku, peminjaman, dan pengguna (admin & member). Aplikasi ini bertujuan untuk membantu mahasiswa memahami konsep dasar pemrograman berorientasi objek (OOP) di Java seperti encapsulation, inheritance, polymorphism, abstract class, interface, exception handling, serta menerapkan konsep MVC (Model-View-Controller). Aplikasi ini menggunakan antarmuka grafis sederhana berbasis Java Swing dan menyimpan data dalam database SQLite.
+Aplikasi **Perpustakaan Mini** adalah aplikasi web sederhana berbasis Java yang digunakan untuk mengelola data buku, peminjaman, dan pengguna (admin & member). Aplikasi ini bertujuan untuk membantu mahasiswa memahami konsep dasar **Pemrograman Berorientasi Objek (OOP)** di Java seperti **encapsulation**, **inheritance**, **polymorphism**, serta menerapkan arsitektur **MVC (Model-View-Controller)**. 
+
+Aplikasi ini dikembangkan menggunakan teknologi **JSP**, **Servlet**, dan **JDBC** untuk koneksi database (MySQL). Antarmuka berbasis halaman web HTML dan JSP.
 
 ## 👥 Role Pengguna
-- *Admin*: Dapat menambahkan dan menghapus buku dari perpustakaan.
-- *Member*: Dapat meminjam dan mengembalikan buku.
+
+- **Admin**: Dapat melihat daftar buku dan mengelola data buku (di tahap lanjutan).
+- **Member**: Dapat melihat daftar buku yang tersedia dan riwayat peminjaman.
 
 ## 🧱 Struktur Kelas (Class Diagram)
 
-Terdapat beberapa class utama:
-- User: Kelas dasar untuk Admin dan Member, memiliki atribut id, name, username, password, dan method login().
-- Admin: Turunan dari User, dapat melakukan addBook() dan delBook().
-- Member: Turunan dari User, dapat melakukan borrowBook() dan returnBook().
-- Book: Menyimpan data buku (id, title, author).
-- Loan: Menyimpan informasi peminjaman (loanId, userId, bookId).
-- SessionManager: Menyimpan user yang sedang login, dan menangani getUser() serta logout().
+Beberapa class utama dalam aplikasi ini:
+- `User` (abstract): Kelas dasar untuk `Admin` dan `Member`, memiliki atribut `id`, `name`, `password`, serta method `login()` dan `tampilkanInfo()`.
+- `Admin`: Turunan dari `User`, memiliki implementasi `tampilkanInfo()` khusus admin.
+- `Member`: Turunan dari `User`, dapat meminjam buku (terhubung ke class `Borrow`).
+- `Book`: Menyimpan data buku seperti `id`, `title`, `author`, dan `stock`.
+- `Borrow`: Mencatat informasi peminjaman (`memberId`, `bookId`, `borrowDate`, `returnDate`).
+- DAO: Terdiri dari `UserDAO`, `BookDAO`, dan `BorrowDAO` untuk mengakses database.
+- `DBUtil`: Class utilitas koneksi database.
 
 ### 📊 Class Diagram
 ![Class Diagram](docs/class_diagram.png)
