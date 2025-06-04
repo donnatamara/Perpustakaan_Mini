@@ -23,6 +23,9 @@ Beberapa class utama dalam aplikasi ini:
 ### 📊 Class Diagram
 ![Class Diagram](docs/class_diagram.png)
 
+### Flowchart
+![Image](https://github.com/user-attachments/assets/31849afb-ac02-4104-b80e-1aeb577e22fa)
+
 ## 🖼 Screenshot Tampilan Aplikasi
 
 Berikut adalah tampilan antarmuka aplikasi:
