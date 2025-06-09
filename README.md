@@ -21,7 +21,7 @@ Beberapa class utama dalam aplikasi ini:
 - `DBUtil`: Class utilitas koneksi database.
 
 ### 📊 Class Diagram
-![Class Diagram](docs/class_diagram.png)
+![Class Diagram Tubes PBO](https://github.com/user-attachments/assets/727d4404-d107-4d5b-a523-aaf3328d64a1)
 
 ### Flowchart
 ![Image](https://github.com/user-attachments/assets/31849afb-ac02-4104-b80e-1aeb577e22fa)
