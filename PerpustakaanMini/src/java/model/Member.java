@@ -10,4 +10,8 @@ public class Member extends User {
     public void tampilkanInfo() {
         System.out.println("Member: " + name + " | ID: " + id);
     }
+
+    public Object getRole() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

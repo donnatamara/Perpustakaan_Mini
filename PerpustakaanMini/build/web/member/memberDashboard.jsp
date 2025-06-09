@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="model.Admin" %>
+<%@ page import="model.Member" %>
 <%@ page session="true" %>
 <%
-    Admin admin = (Admin) session.getAttribute("user");
-    if (admin == null) {
+    Member member = (Member) session.getAttribute("user");
+    if (member == null) {
         response.sendRedirect("../login.jsp");
         return;
     }
@@ -12,7 +12,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
+    <title>Dashboard Member</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -36,20 +36,19 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="#">📚 Admin Dashboard</a>
+        <a class="navbar-brand" href="#">📖 Member Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<%= request.getContextPath() %>/admin/adminBooks">Kelola Buku</a>
-
+                    <a class="nav-link" href="<%= request.getContextPath() %>/member/memberBooks">Daftar Buku</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%= request.getContextPath() %>/admin/adminLoanHistory">Histori Peminjaman</a>
+                    <a class="nav-link" href="<%= request.getContextPath() %>/member/memberLoanHistory">Peminjaman Saya</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-danger" href="<%= request.getContextPath() %>/logout.jsp">Logout</a>
@@ -64,12 +63,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-dashboard p-4 text-center">
-                <h2 class="mb-3">Selamat datang, <strong>Admin <%= admin.getName() %></strong> 👋</h2>
-                <p class="lead text-muted">Gunakan menu navigasi di atas atau di bawah untuk mengelola buku dan memantau peminjaman di sistem perpustakaan.</p>
+                <h2 class="mb-3">Selamat datang, <strong><%= member.getName() %></strong> 👋</h2>
+                <p class="lead text-muted">Silakan gunakan menu navigasi di atas atau di bawah untuk menjelajahi koleksi buku dan melihat riwayat peminjaman Anda.</p>
                 <hr>
                 <div class="d-flex justify-content-center gap-3 mt-4">
-                    <a href="<%= request.getContextPath() %>/admin/adminBooks" class="btn btn-primary">Kelola Buku</a>
-                    <a href="<%= request.getContextPath() %>/admin/adminLoanHistory" class="btn btn-outline-secondary">Histori Peminjaman</a>
+                    <a href="<%= request.getContextPath() %>/member/memberBooks" class="btn btn-primary">Lihat Buku</a>
+                    <a href="<%= request.getContextPath() %>/member/memberLoanHistory" class="btn btn-outline-secondary">Peminjaman Saya</a>
                 </div>
             </div>
         </div>
