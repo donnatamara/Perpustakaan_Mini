@@ -9,6 +9,16 @@ Aplikasi ini dikembangkan menggunakan teknologi **JSP**, **Servlet**, dan **JDBC
 - **Admin**: Dapat melihat daftar buku dan mengelola data buku (seperti edit buku, hapus buku, dan menambah buku).
 - **Member**: Dapat melihat daftar buku yang tersedia dan riwayat peminjaman.
 
+## 🛠️Fitur
+**Fitur Umum**
+Login & Logout: Sistem otentikasi berbasis peran (Admin & Member) dengan manajemen sesi.
+**Fitur Admin**
+- Manajemen Buku (CRUD): Admin dapat menambah, melihat, mengubah, dan menghapus data buku.
+- Manajemen Peminjaman: Admin dapat melihat seluruh riwayat peminjaman dan memproses pengembalian buku.
+**Fitur Member**
+- Katalog & Peminjaman: Member dapat melihat katalog buku dan melakukan peminjaman.
+- Riwayat Peminjaman: Member dapat melihat riwayat peminjaman buku mereka.
+
 ## 🧱 Struktur Kelas (Class Diagram)
 
 Beberapa class utama dalam aplikasi ini:
