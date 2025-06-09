@@ -6,35 +6,41 @@ Aplikasi ini dikembangkan menggunakan teknologi **JSP**, **Servlet**, dan **JDBC
 
 ## 👥 Role Pengguna
 
-- **Admin**: Dapat melihat daftar buku dan mengelola data buku (di tahap lanjutan).
+- **Admin**: Dapat melihat daftar buku dan mengelola data buku (seperti edit buku, hapus buku, dan menambah buku).
 - **Member**: Dapat melihat daftar buku yang tersedia dan riwayat peminjaman.
 
 ## 🧱 Struktur Kelas (Class Diagram)
 
 Beberapa class utama dalam aplikasi ini:
-- `User` (abstract): Kelas dasar untuk `Admin` dan `Member`, memiliki atribut `id`, `name`, `password`, serta method `login()` dan `tampilkanInfo()`.
-- `Admin`: Turunan dari `User`, memiliki implementasi `tampilkanInfo()` khusus admin.
-- `Member`: Turunan dari `User`, dapat meminjam buku (terhubung ke class `Borrow`).
-- `Book`: Menyimpan data buku seperti `id`, `title`, `author`, dan `stock`.
-- `Borrow`: Mencatat informasi peminjaman (`memberId`, `bookId`, `borrowDate`, `returnDate`).
-- DAO: Terdiri dari `UserDAO`, `BookDAO`, dan `BorrowDAO` untuk mengakses database.
-- `DBUtil`: Class utilitas koneksi database.
+- `User` (abstract): Kelas dasar untuk `Admin` dan `Member`, memiliki atribut `id`, `name`, `password`, `role`, serta method `login()`.
+- `Admin`: Turunan dari `User`, menyimpan data user seperti `id`, `name` dan `password` serta memiliki method `tampilkanInfo()` dan `logout()`.
+- `Member`: Turunan dari `User`, menyimpan data user seperti `id`, `name` dan `password` serta memiliki method `tampilkanInfo()` dan `logout()`.
+- `Books`: Menyimpan data buku seperti `id`, `title`, `author`, dan `stock`. Untuk menu Admin memiliki method `addBook()`, `updateBook()`, dan `deleteBook()`. Untuk menu Member memiliki method `loanBook()`.
+- `LoanHistory`: Mencatat informasi peminjaman (`id`, `nama`, `tanggalPeminjaman`, `tanggalKembali`, dan `status`).
 
 ### 📊 Class Diagram
-![Class Diagram Tubes PBO](https://github.com/user-attachments/assets/727d4404-d107-4d5b-a523-aaf3328d64a1)
-
-### Flowchart
-![Image](https://github.com/user-attachments/assets/31849afb-ac02-4104-b80e-1aeb577e22fa)
+![Class Diagram Tubes PBO (1) drawio](https://github.com/user-attachments/assets/f3af258b-a0aa-4e37-8414-9fe1cf8fac83)
 
 ## 🖼 Screenshot Tampilan Aplikasi
 
 Berikut adalah tampilan antarmuka aplikasi:
 
-![image](https://github.com/user-attachments/assets/9b088e15-d864-4fba-982f-f4633be00326)
+![image](https://github.com/user-attachments/assets/3fd752b0-7b00-41c3-954b-16653b77ed21)
 
-![Tampilan Peminjaman Buku](screenshots/borrowbook.png)
 
->Catatan: Tampilan dapat berubah seiring perkembangan project.
+**Admin**
+![image](https://github.com/user-attachments/assets/53340690-dbad-4341-b17d-9a37d45ec7d6)
+![image](https://github.com/user-attachments/assets/012fa7e0-7066-414d-82b0-16b698f1762b)
+![image](https://github.com/user-attachments/assets/5068574a-aed8-4780-8280-ae80ad851bdf)
+![image](https://github.com/user-attachments/assets/67db0e5e-e25e-44cf-8cb9-0d46e3ebb6e8)
+
+
+**Member**
+![image](https://github.com/user-attachments/assets/67e14c6f-460a-41ac-9c75-bcfbbb26f523)
+![image](https://github.com/user-attachments/assets/26042e75-b605-4707-b817-6921fbb9df70)
+![image](https://github.com/user-attachments/assets/00cda337-7450-40fa-870d-e05f41355c62)
+
+
 
 ## 🔗 Kolaborator
 - @shafasyahii
